@@ -1,0 +1,10 @@
+package primitiveTypeFI;
+
+public class primitiveBinaryOperator {
+	
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

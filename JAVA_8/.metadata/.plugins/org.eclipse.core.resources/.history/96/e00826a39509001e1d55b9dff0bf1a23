@@ -1,0 +1,16 @@
+package primitiveTypeFI;
+
+class emp
+{
+	double salory;
+	
+	public emp(double salory)
+	{
+		this.salory=salory;
+	}
+	
+}
+
+public class doubleUnaryOperator {
+
+}

@@ -1,0 +1,25 @@
+//Write a function that takes the input array of strings and returns the longest common prefix as a string.
+//Example:
+//Input: ["flower", "flow", "flight"]
+//Output: "fl"
+
+
+public class commonSubString {
+
+	public static void main(String[] args) {
+		
+		String[] str={"flower", "flow", "flight"};
+		String e1="";
+		String e2="";
+		String e3="";
+		
+		for(int i=0;i<str.length;i++)
+		{
+			for(int j=1;j<4;j++)
+			{
+				
+			}
+		}
+	}
+
+}

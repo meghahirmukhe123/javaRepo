@@ -1,0 +1,14 @@
+package primitiveTypeFI;
+
+
+
+//to reduce n number of conversion of autoboxing and autounboxing
+public class intPredicate {
+	public static void main(String[] args)
+	
+	{
+		
+	}
+
+	
+}

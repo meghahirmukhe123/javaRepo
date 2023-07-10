@@ -1,0 +1,14 @@
+package primitiveTypeFI;
+
+import java.util.function.IntToDoubleFunction;
+
+//find sqrt of given number
+public class intToDoubleFunction {
+
+	public static void main(String[] args) {
+		
+		IntToDoubleFunction i=j->Math.sqrt(j);
+
+	}
+
+}

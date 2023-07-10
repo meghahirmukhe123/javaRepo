@@ -1,0 +1,11 @@
+package primitiveTypeFI;
+
+public class doublePredicate {
+
+	public static void main(String[] args) {
+		
+		double[] arr= {10.0,11.0,12.0,13.0,14.0};
+		
+	}
+
+}

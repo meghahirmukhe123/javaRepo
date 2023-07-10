@@ -1,0 +1,19 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDateTime;
+
+//to handle both date and time at a time
+public class localDateTime {
+
+	public static void main(String[] args)
+	{
+		LocalDateTime lt= LocalDateTime.now();
+		System.out.println("local date and time is: "+lt);
+		
+		//to get only day
+		
+		int day= lt.getDayOfMonth();
+		int month= lt.getMonthValue();
+		int yr= lt.getYear();
+	}
+}

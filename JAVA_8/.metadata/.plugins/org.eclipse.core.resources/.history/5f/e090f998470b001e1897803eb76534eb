@@ -1,0 +1,113 @@
+package java8BasicApplication.project1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.chrono.ChronoLocalDate;
+import java.util.*;
+
+//print all data of student
+class stu
+{
+	String name;
+	String lname;
+	int marks;
+	int std;
+	LocalDate addate2;  //admission date
+	
+	public stu(String name,String lname,int marks,int std,LocalDate addate)
+	{
+		this.name=name;
+		this.lname=lname;
+		this.marks=marks;
+		this.std=std;
+		this.addate2=addate;
+	}
+}
+public interface project3 {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number of students");
+		int size= sc.nextInt();
+		
+		List<stu> l= new ArrayList<>();
+		for(int i=0;i<size;i++)
+		{
+			System.out.println("enter name: ");
+			String name= sc.next();
+			System.out.println("enter last name: ");
+			String lname= sc.next();
+			System.out.println("enter marks: ");
+			int marks= sc.nextInt();
+			System.out.println("enter std: ");
+			int std= sc.nextInt();
+			System.out.println("enter admission date");
+			LocalDate addate=LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());
+			l.add(new stu(name,lname,marks,std,addate));
+			System.out.println();
+		}
+		
+		int  newstdcount=0;
+		
+		Predicate<stu> pr= i->i.marks>35;
+		
+		//increase std of student by 1
+		Function<stu,Integer> f=i->i.std+1;
+		System.out.println("students who are pass are: ");
+		for(stu s:l)
+		{
+			if(pr.test(s))
+				
+			{
+				newstdcount+=1;
+				System.out.println("name is: "+s.name+" "+s.lname+" "+s.marks+" "+s.std+" "+s.addate2+" new standard is: "+f.apply(s));
+				System.out.println();
+			}
+		}
+		System.out.println("number of student entered in new std: "+newstdcount);
+		System.out.println("number of student who are still in previous std: "+(size-newstdcount));
+		System.out.println("___________________________________________________________________________________");
+		
+		
+		
+		
+		//start year of school
+		LocalDate date= LocalDate.of(1990, 12, 9);
+		LocalDate d2= LocalDate.now();
+		Period p= Period.between(date, d2);
+		System.out.println("school has completed  "+p.getYears()+" years");
+		System.out.println("___________________________________________________________________________________");
+		
+		//get data in between particular date
+		System.out.println("enter year1 and year2 to get data in between that: ");
+		System.out.println("year 1:enter first year,then month then day ");
+		LocalDate year1= LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());
+		System.out.println("year 2:enter first year,then month then day ");
+		LocalDate year2= LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());
+		Period getdata= Period.between(year1, year2);
+		
+		int y1= year1.getYear();
+		int y2=year2.getYear();
+		
+		System.out.println("data of students whose admission is in between: "+y1+" and "+y2);
+		for(stu s:l)
+		{
+			if(s.addate2.isAfter(LocalDate.of(year1.getYear(), year1.getMonthValue(),year1.getDayOfMonth())) &&
+					s.addate2.isBefore(LocalDate.of(year2.getYear(),year2.getMonthValue(),year2.getDayOfMonth())))
+			{
+				System.out.println("name: "+s.name+" lastname: "+s.lname+" std is: "+s.std+" marks: "+s.marks+" date of admission is: "+s.addate2);
+				System.out.println();
+			}
+		}
+		
+		
+	
+		
+		
+	}
+
+}

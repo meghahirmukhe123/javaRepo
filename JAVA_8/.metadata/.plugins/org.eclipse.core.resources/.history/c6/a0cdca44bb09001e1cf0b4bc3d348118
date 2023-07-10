@@ -1,0 +1,16 @@
+package primitiveTypeFI.BinaryOperator;
+
+import java.util.function.LongBinaryOperator;
+
+public class longBinaryOperator {
+	
+	public static void main(String[] args)
+	{
+		
+		
+		LongBinaryOperator l= (a,b)->a-b;
+		
+		
+	}
+
+}

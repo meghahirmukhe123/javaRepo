@@ -1,0 +1,15 @@
+package methodRefernce;
+
+//constructor reference ex2
+public interface consRef2 {
+	
+	public void m1();
+}
+
+class stu
+{
+	public void m2()
+	{
+		System.out.println("this is just a method");
+	}
+}

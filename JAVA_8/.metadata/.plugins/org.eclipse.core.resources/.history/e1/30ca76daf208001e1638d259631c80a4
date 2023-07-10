@@ -1,0 +1,35 @@
+package primitiveTypeFI;
+
+public class generic {
+	
+	public <E> void printArray(E[] s)
+	{
+		for(int i=0;i<s.length;i++)
+		{
+			System.out.println(s[i]);
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		generic g= new generic();
+		String[] str= {"cat","dog","mouse"};
+		Integer[] i= {1,2,3,4,5,6};
+		g.printArray(str);
+		g.printArray(i);
+		
+	}
+
+}
+
+
+//second way:print data using foreach loop
+class foreach{
+	public <aa extends Iterable<?>> void printdata(a x)
+	{
+		for(a z:x)
+		{
+			System.out.println(z);
+		}
+	}
+}

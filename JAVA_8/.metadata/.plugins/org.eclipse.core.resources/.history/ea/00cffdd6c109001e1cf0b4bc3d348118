@@ -1,0 +1,7 @@
+package methodRefernce;
+
+public interface ex2 {
+	
+	public abstract void m1(int a);  //if we have not return abstract keyword it will be ok
+
+}

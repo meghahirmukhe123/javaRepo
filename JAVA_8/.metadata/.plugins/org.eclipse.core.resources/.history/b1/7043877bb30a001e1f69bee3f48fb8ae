@@ -1,0 +1,11 @@
+package methodRefernce;
+
+public class constructorRef {
+	public constructorRef()
+	{
+		System.out.println("learning constructor reference:");
+	}
+	
+	
+
+}

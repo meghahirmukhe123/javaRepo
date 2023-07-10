@@ -1,0 +1,8 @@
+package dateAndTimeAPI;
+
+//if we want to print date in our own forwat
+//ex: 17-04-2023
+
+public class getOwnDateFormat {
+
+}

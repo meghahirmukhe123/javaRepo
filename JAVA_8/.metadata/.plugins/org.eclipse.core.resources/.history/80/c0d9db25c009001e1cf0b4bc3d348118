@@ -1,0 +1,6 @@
+package methodRefernce;
+
+public interface myinterface {
+
+	public void m1();
+}

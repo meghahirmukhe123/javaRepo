@@ -1,0 +1,33 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDateTime;
+
+//to handle both date and time at a time
+public class localDateTime {
+
+	public static void main(String[] args)
+	{
+		LocalDateTime lt= LocalDateTime.now();
+		System.out.println("local date and time is: "+lt);
+		
+		//to get only day,month,year
+		
+		int day= lt.getDayOfMonth();
+		int month= lt.getMonthValue();
+		int yr= lt.getYear();
+		
+		//if we want to get date in format of day:month:year
+		System.out.printf("%d:%d:%d",day,month,yr);
+		
+		
+		//to get only hour,minute,second,nanosecond
+		
+		int hr= lt.getHour();
+		int min= lt.getMinute();
+		int sec=lt.getSecond();
+		int nanosec= lt.getNano();
+		
+		//if want to print time in my own format like hr-min-sec-nanosec
+		System.out.printf("%d-%d-%d-%d",hr,min,sec,nanosec);
+	}
+}

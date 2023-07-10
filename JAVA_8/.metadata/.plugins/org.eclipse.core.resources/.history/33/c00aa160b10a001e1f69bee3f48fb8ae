@@ -1,0 +1,13 @@
+package methodRefernce;
+
+interface interf
+{
+	public void m1();
+}
+public class staticMethodref {
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

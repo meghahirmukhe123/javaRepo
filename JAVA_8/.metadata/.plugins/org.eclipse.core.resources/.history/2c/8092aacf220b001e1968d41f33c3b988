@@ -1,0 +1,5 @@
+package java8BasicApplication.project1;
+//You are given a list of strings. Write a Java program to filter out all the strings that contain the letter 'a' 
+public interface project2 {
+
+}

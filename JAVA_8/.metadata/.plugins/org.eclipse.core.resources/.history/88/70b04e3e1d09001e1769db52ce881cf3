@@ -1,0 +1,11 @@
+package primitiveTypeFI.consumer;
+
+//inc salory of emp by 500
+class emp
+{
+	String name;
+	int salory;
+}
+public class objToIntConsumer {
+
+}

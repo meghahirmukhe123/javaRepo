@@ -1,0 +1,32 @@
+package streamMethods;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class sorted {
+	public static void main(String[] args)
+	{
+		List<Integer> l= List.of(1,7,4,9,3,5);
+		System.out.println("asceding order");
+		
+		List<Integer> l2= l.stream().sorted().collect(Collectors.toList());
+		System.out.println(l2);
+		
+		//reverse order
+		System.out.println("descending order");
+		List<Integer> l3= l.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		System.out.println(l3);
+		
+		
+		//second way of reverse order
+		
+		System.out.println("second way of reverse order");
+		List<Integer> l4= new ArrayList<>();
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+package methodRefernce;
+
+public interface nonstatic {
+	public void m1();
+
+}
+
+class nstatic
+{
+	public void m2()
+	{
+		System.out.println("referring non static method");
+	}
+	
+	public static void main(String[] args)
+	{
+		nstatic n= new nstatic();
+	}
+}

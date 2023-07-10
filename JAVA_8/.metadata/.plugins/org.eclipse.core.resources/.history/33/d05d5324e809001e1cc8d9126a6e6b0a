@@ -1,0 +1,12 @@
+package dateAndTimeAPI;
+
+//if we want to get date and time of particular day not current date and time 
+
+public class getPrticularDate {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

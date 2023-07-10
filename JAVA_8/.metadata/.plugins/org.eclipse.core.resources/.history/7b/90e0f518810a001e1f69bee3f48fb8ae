@@ -1,0 +1,9 @@
+package dateAndTimeAPI;
+
+//check given year is leap or not
+import java.util.*;
+
+
+public class leapYear {
+
+}

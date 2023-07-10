@@ -1,0 +1,26 @@
+package conversion;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class mapToSet {
+	public static void main(String[] args)
+	
+	{
+		Map<Integer,Integer> map= new HashMap<>();
+		map.put(1, 1);
+		map.put(2, 4);
+		map.put(3, 9);
+		map.put(4, 16);
+		System.out.println("map is: "+map);
+		
+		Set<Map.Entry<Integer, Integer>> set= new HashSet<>();
+		
+		set= map.entrySet().stream().collect(Collectors.toSet());
+		System.out.println("set is: "+set);
+	}
+
+}

@@ -1,0 +1,17 @@
+package methodRefernce;
+
+public interface myinterface {
+
+	public void m1();
+}
+
+class test
+{
+	public static void m2()
+	{
+		System.out.println("print1:");
+		System.out.println("print1:");
+		System.out.println("print1:");
+		
+	}
+}

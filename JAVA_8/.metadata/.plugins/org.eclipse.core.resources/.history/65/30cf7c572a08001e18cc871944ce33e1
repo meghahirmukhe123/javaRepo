@@ -1,0 +1,12 @@
+package streamMethods;
+
+import java.util.List;
+
+public class toArray {
+
+	public static void main(String[] args) {
+		List<Integer> l
+
+	}
+
+}

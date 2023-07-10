@@ -1,0 +1,21 @@
+package methodRefernce;
+
+public interface ex2 {
+	
+	public void m1(int a);
+
+}
+
+class Ex2
+{
+	public static void m2(int b)
+	{
+		System.out.println("hello,welcome");
+	}
+	public static void main(String[] args)
+	{
+		ex2 e=Ex2::m2;
+		e.m1(1);
+		
+	}
+}

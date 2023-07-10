@@ -1,0 +1,15 @@
+package dateAndTimeAPI;
+
+//check given year is leap or not
+import java.util.*;
+
+
+public class leapYear {
+	public static void main(String[] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter year: ");
+		int n= sc.nextInt();
+	}
+
+}

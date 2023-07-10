@@ -1,0 +1,51 @@
+//write program for pangram.
+//pangram means sentence contains all the alphabets.
+import java.util.*;
+import java.util.stream.Stream;
+public class pangram {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter sentence: ");
+		String st= sc.nextLine();
+		String str= st.toLowerCase();
+		
+		char[] alpha= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+		
+		String str1= str.replace(" ", "");
+		
+		char[] ch= str1.toCharArray();
+		
+		Arrays.sort(ch);
+		
+		Set<Character> s= new HashSet<>();
+		for(int i=0;i<ch.length;i++)
+			
+		{
+			s.add(ch[i]);
+		}
+		
+		System.out.println("set is: "+s);
+		if(s.size() == alpha.length)
+		{
+		for(int i=0;i<s.size();i++)
+		{
+			for(int j=i;j<alpha.length;j++)
+			{
+				
+					
+			}
+		}
+		}
+		else {
+			System.out.println("not pangram.few alphabets are missing");
+		}
+		
+		
+		
+		
+		
+	
+	}
+
+}

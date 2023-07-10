@@ -1,0 +1,24 @@
+package primitiveTypeFI.consumer;
+
+import java.util.List;
+
+//inc salory of emp by 500
+class emp
+{
+	String name;
+	int salory;
+	
+	public emp(String name,int salory)
+	{
+		this.name=name;
+		this.salory=salory;
+	}
+}
+public class objToIntConsumer {
+	
+	public static void main(String[] args)
+	{
+		List<emp> l=
+	}
+
+}

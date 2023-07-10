@@ -1,0 +1,11 @@
+package streamMethods;
+import java.util.List;
+
+
+public class min {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

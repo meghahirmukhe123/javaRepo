@@ -1,0 +1,12 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDateTime;
+
+//to handle both date and time at a time
+public class localDateTime {
+
+	public static void main(String[] args)
+	{
+		LocalDateTime lt= LocalDateTime.now();
+	}
+}

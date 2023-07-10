@@ -1,0 +1,10 @@
+package primitiveTypeFI.BinaryOperator;
+
+public class longBinaryOperator {
+	
+	public static void main(String[] args)
+	{
+		long[] i= {1,56,78,90,34,55,79,9};
+	}
+
+}

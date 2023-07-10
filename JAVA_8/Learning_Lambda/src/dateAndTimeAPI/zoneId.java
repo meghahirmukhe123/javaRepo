@@ -1,0 +1,12 @@
+package dateAndTimeAPI;
+
+import java.time.ZoneId;
+
+public class zoneId {
+	public static void main(String[] args)
+	{
+		ZoneId z= ZoneId.systemDefault();
+		System.out.println("current zone is:  "+z);
+	}
+
+}

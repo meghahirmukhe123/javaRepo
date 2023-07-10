@@ -1,0 +1,9 @@
+package conversion;
+
+public class mapToList {
+	public static void main(String[] args)
+	{
+		Map<Integer,String> map= new HashMap<>();
+	}
+
+}

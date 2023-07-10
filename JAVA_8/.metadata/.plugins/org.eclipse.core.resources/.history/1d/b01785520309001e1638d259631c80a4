@@ -1,0 +1,11 @@
+package primitiveTypeFI;
+
+//find length of each string from array
+public class ToIntFunction {
+
+	public static void main(String[] args) {
+		String[] arr= {"cat","dog","rabbit","rat"};l		
+
+	}
+
+}

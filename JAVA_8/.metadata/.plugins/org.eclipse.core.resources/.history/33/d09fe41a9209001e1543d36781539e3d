@@ -1,0 +1,12 @@
+package primitiveTypeFI;
+
+import java.util.function.UnaryOperator;
+
+//when we have same input and return type use this.it is child inteface of function only.
+public class unaryOperator {
+	public static void main(String[] args)
+	{
+		UnaryOperator<Integer> u= i->i*i;
+	}
+
+}

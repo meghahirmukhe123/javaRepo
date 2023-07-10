@@ -1,0 +1,12 @@
+package streamMethods;
+
+import java.util.stream.Stream;
+
+public class streamOf {
+
+	public static void main(String[] args) {
+		Stream<Integer> s= Stream.of(2,6,7,23,5,6,1);
+
+	}
+
+}

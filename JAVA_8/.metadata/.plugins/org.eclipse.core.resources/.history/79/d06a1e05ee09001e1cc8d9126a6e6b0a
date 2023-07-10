@@ -1,0 +1,17 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDate;
+
+//to find age of person
+
+public class findAge {
+	public static void main(String[] args)
+	{
+		LocalDate birthday= LocalDate.of(1990, 05, 12);
+		LocalDate lt= LocalDate.now();
+		
+		
+		
+	}
+
+}

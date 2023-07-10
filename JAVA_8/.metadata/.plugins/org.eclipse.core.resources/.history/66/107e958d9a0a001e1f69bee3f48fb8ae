@@ -1,0 +1,11 @@
+//Input: [10, 9, 2, 5, 3, 7, 101, 18]
+//Output: 4
+
+//Explanation: The longest increasing subarray is [2, 5, 3, 7], which has a length of 4.
+//Note:cant use any sort method.
+import java.util.*;
+
+
+public class longestIntegerSubarray {
+
+}

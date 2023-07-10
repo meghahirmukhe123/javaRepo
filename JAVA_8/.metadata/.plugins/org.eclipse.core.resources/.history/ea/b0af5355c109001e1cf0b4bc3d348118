@@ -1,0 +1,15 @@
+package methodRefernce;
+
+public interface ex2 {
+	
+	public void m1(int a);
+
+}
+
+class Ex2
+{
+	public static void m1(int b,int c)
+	{
+		System.out.println("hello,welcome");
+	}
+}

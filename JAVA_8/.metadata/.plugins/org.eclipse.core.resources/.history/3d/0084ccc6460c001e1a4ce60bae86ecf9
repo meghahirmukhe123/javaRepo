@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class sortAccordingTolength {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size of list: ");
+		int size= sc.nextInt();
+		List<String> l= new ArrayList<>();
+		System.out.println("enter elements in list: ");
+		for(int i=0;i<size;i++)
+		{
+			l.add(sc.next());
+		}
+		System.out.println("given list is: "+l);
+		Map<String,Integer> m= new HashMap<>();
+		
+		m=l.stream().map(x->x).collect(Collectors.toMap(a->a,b->b.length()));
+		System.out.println(m);
+
+	}
+
+}

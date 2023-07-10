@@ -1,0 +1,11 @@
+package primitiveTypeFI;
+
+class emp
+{
+	double salory;
+	
+}
+
+public class doubleUnaryOperator {
+
+}

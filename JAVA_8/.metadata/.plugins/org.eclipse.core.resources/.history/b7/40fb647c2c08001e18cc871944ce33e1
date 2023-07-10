@@ -1,0 +1,24 @@
+package streamMethods;
+
+import java.util.stream.Stream;
+
+public class streamOf {
+
+	public static void main(String[] args) {
+		
+		//for group of elements
+		Stream<Integer> s= Stream.of(2,6,7,23,5,6,1);
+		s.forEach(System.out::println);
+		
+		//for array
+		
+		int[] arr= {1,5,2,4,7,8,9};
+		
+		Stream<int[]> s1= Stream.of(arr);
+		s1.forEach(System.out::println);
+		
+		
+
+	}
+
+}

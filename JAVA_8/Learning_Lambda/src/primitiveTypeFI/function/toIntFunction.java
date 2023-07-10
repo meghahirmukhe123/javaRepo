@@ -1,0 +1,19 @@
+package primitiveTypeFI.function;
+import java.util.function.*;
+
+//find length of each string from array
+public class toIntFunction {
+
+	public static void main(String[] args) {
+		String[] arr= {"cat","dog","rabbit","rat"};
+		
+		ToIntFunction<String> str = i -> i.length();
+		
+		for(String s:arr)
+		{
+			System.out.println(str.applyAsInt(s));
+		}
+
+	}
+
+}

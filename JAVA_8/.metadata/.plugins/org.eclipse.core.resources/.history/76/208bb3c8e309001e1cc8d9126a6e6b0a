@@ -1,0 +1,15 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDate;
+
+//if we want to print date in our own forwat
+//ex: 17-04-2023
+
+
+public class getOwnDateFormat {
+
+	public static void main(String[] args)
+	{
+		LocalData date= LocalDate.now();
+	}
+}

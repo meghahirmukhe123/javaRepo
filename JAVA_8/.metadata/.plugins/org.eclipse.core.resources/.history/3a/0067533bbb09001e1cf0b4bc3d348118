@@ -1,0 +1,19 @@
+package primitiveTypeFI.BinaryOperator;
+
+import java.util.function.LongBinaryOperator;
+
+public class longBinaryOperator {
+	
+	public static void main(String[] args)
+	{
+		long[] i= {1,56,78,90,34,55,79,9};
+		
+		LongBinaryOperator l= (a,b)->(a+b)/2;
+		
+		for(long x:i)
+		{
+			System.out.println(l.applyAsLong(x, x));
+		}
+	}
+
+}

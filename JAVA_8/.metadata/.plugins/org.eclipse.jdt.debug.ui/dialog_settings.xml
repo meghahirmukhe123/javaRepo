@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{withoutLambda.java[mainclass&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{hello.java[hello&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{addition.java[myclass&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{helloWorld.java[test&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{findLengthOFString.java[ans&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{runnableMethod.java[runnableMethod&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{comparator.java[mytest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{customiseSortingUsingLamda.java[myans&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{overrideDefaultMethod.java[check&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{defaultMethod.java[defaultans&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;Lamda{callStaticInterfaceMethod.java[test2&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_stream/src&amp;lt;primitiveTypeFI{generic.java[Foreach&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{myinterface.java[test&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{ex2.java[Ex2&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{ex2.java[mref&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{staticMethod.java[mycls&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{nonstatic.java[nstatic&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{constructorRef.java[mymain&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Learning_Lambda/src&amp;lt;methodRefernce{consRef2.java[clsmain&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="100"/>
+			<item key="DIALOG_Y_ORIGIN" value="8"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+</section>

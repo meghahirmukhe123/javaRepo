@@ -1,0 +1,13 @@
+package primitiveTypeFI.supplier;
+
+import java.util.function.IntSupplier;
+
+//generate random 6 digit OTP
+public class intsupplier {
+	
+	public static void main(String[] args)
+	{
+		IntSupplier i=()->(int)(Math.random(0,9))*10;
+	}
+
+}

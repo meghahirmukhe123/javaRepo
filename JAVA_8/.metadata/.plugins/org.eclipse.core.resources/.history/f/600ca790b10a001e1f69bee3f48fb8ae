@@ -1,0 +1,6 @@
+package methodRefernce;
+
+public interface staticMethod {
+	public void m1();
+
+}

@@ -1,0 +1,17 @@
+package primitiveTypeFI;
+
+import java.util.function.LongUnaryOperator;
+
+public class longUnaryOperator {
+	public static void main(String[] args)
+	{
+		LongUnaryOperator l= i->i%3;
+		
+		int[] b= {3,6,9,12,15,18};
+		for(long x:b)
+		{
+			System.out.println(l.applyAsLong(x));
+		}
+	}
+
+}

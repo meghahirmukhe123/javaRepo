@@ -1,0 +1,12 @@
+package primitiveTypeFI;
+
+import java.util.function.IntBinaryOperator;
+
+public class intBinaryOperator {
+	
+	public static void main(String[] args)
+	{
+		IntBinaryOperator i= j->j+j;
+	}
+
+}

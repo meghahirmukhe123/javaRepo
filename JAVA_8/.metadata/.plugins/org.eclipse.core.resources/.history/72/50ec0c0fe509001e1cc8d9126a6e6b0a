@@ -1,0 +1,16 @@
+package dateAndTimeAPI;
+
+import java.time.LocalTime;
+
+public class getOwnTimeFormat {
+
+	public static void main(String[] args)
+	{
+		LocalTime t=LocalTime.now();
+		System.out.println("time is: "+t);
+		
+		int hr= t.getHour();
+		int min=t.getMinute();
+		int sec= t.getSecond();
+	}
+}

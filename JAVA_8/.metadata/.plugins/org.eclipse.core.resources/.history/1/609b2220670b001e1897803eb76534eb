@@ -1,0 +1,12 @@
+//Find average of even numbers from given list.
+import java.util.*;
+public class avgOfEvenFromList {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size of list: ");
+		int size= sc.nextInt();
+		List<Integer> l= new ArrayList<>();
+	}
+
+}

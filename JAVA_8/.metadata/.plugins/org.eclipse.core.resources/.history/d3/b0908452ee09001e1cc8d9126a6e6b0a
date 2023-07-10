@@ -1,0 +1,23 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+//to find age of person
+
+public class findAge {
+	public static void main(String[] args)
+	{
+		LocalDate birthday= LocalDate.of(1990, 05, 12);
+		LocalDate lt= LocalDate.now();
+
+		//to find age we have to find years from 1990 to present
+		Period p = Period.between(birthday, lt);
+		System.out.println("%d year-%d months- %d days",p.getYears(),p.getMonths(),p.getDays());
+	
+		
+		
+		
+	}
+
+}

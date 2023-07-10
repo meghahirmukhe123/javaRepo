@@ -1,0 +1,11 @@
+package primitiveTypeFI;
+
+import java.util.function.DoubleUnaryOperator;
+
+public class doubleUnaryOperator {
+	public static void main(String[] args) {
+		
+		DoubleUnaryOperator d= i->(i*2)/4;
+	}
+
+}

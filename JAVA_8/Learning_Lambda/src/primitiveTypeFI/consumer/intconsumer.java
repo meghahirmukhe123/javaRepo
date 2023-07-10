@@ -1,0 +1,14 @@
+package primitiveTypeFI.consumer;
+
+import java.util.function.IntConsumer;
+
+public class intconsumer {
+	
+	public static void main(String[] args)
+	{
+		IntConsumer i= j->System.out.println(j*j);
+		
+		i.accept(4);
+	}
+
+}

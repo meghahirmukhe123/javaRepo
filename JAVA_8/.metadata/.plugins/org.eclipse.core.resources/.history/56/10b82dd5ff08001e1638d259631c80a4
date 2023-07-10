@@ -1,0 +1,9 @@
+package primitiveTypeFI;
+
+public class intFunction {
+
+	public static void main(String[] args)
+	{
+		String[] str= {"cat","dog","mouse","rabbit"};
+	}
+}

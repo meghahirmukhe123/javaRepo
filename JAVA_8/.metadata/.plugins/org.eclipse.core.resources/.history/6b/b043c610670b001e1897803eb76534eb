@@ -1,0 +1,5 @@
+//Find average of even numbers from given list.
+import java.util.*;
+public class avgOfEvenFromList {
+
+}

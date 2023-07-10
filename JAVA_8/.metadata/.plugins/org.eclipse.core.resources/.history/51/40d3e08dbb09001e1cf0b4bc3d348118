@@ -1,0 +1,10 @@
+package primitiveTypeFI.BinaryOperator;
+
+public class doubleBinaryOperator {
+	public static void main(String[] args)
+	{
+		double[] d= {4.0,7.0,3.5,4.2};
+		
+	}
+
+}

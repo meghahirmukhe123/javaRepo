@@ -1,0 +1,13 @@
+package primitiveTypeFI;
+
+import java.util.function.IntUnaryOperator;
+
+public class intUnaryOperator {
+
+	public static void main(String[] args)
+	{
+		IntUnaryOperator i= x->x*x;
+		
+		int[] arr= {1,2,3,4,5};
+	}
+}

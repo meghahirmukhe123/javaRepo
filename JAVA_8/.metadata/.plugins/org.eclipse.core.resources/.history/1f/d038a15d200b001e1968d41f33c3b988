@@ -1,0 +1,8 @@
+package java8BasicApplication.project1;
+//You are given a list of integers. 
+//Write a Java program to find the sum of all the even numbers in the list using Java 8 features.
+
+public interface project1 {
+
+	
+}

@@ -1,0 +1,19 @@
+//Write a program to sort a list of strings in descending order of length.
+import java.util.*;
+public class sortAccToLength {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size of list: ");
+		int size= sc.nextInt();
+		List<String> l= new ArrayList<>();
+		System.out.println("enter elements in list: ");
+		for(int i=0;i<size;i++)
+		{
+			l.add(sc.next());
+		}
+		System.out.println("given list is: "+l);
+		
+	}
+
+}

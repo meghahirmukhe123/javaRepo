@@ -1,0 +1,6 @@
+package methodRefernce;
+
+public class nonstatic {
+	public void m1();
+
+}

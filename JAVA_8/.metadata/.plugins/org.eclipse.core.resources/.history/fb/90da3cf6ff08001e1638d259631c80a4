@@ -1,0 +1,13 @@
+package primitiveTypeFI;
+
+import java.util.function.IntFunction;
+
+public class intFunction {
+
+	public static void main(String[] args)
+	{
+		String[] str= {"cat","dog","mouse","rabbit"};
+		
+		IntFunction<R>
+	}
+}

@@ -1,0 +1,18 @@
+package methodRefernce;
+
+public class runnableAndInstanceMethod {
+	public void m1()
+	{
+		System.out.println("learning object refernce");
+	}
+	public static void main(String[] args)
+	{
+		runnableAndInstanceMethod obj= new runnableAndInstanceMethod();
+		Runnable r= obj::m1;
+		Thread t= new Thread(r);
+		t.start();
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package primitiveTypeFI;
+
+import java.util.function.LongUnaryOperator;
+
+public class longUnaryOperator {
+	public static void main(String[] args)
+	{
+		LongUnaryOperator l= i->i%3;
+	}
+
+}

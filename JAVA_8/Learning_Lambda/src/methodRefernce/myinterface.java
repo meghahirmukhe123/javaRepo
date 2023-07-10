@@ -1,0 +1,23 @@
+package methodRefernce;
+
+public interface myinterface {
+
+	public void m1();
+}
+
+class test
+{
+	public static void m2()
+	{
+		System.out.println("print1:");
+		System.out.println("print2:");
+		System.out.println("print3:");
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		myinterface m= test::m2;  //here m1 referce m2
+		m.m1();    ///o/p for this:print1: print2: print3
+	}
+}

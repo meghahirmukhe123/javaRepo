@@ -1,0 +1,20 @@
+package dateAndTimeAPI;
+
+import java.time.LocalDateTime;
+import java.time.Month;
+
+//if we want to get date and time of particular day not current date and time 
+
+public class getPrticularDate {
+
+	public static void main(String[] args) {
+		
+		//LocalDateTime lt= LocalDateTime.of(year,month,day,hour,minute,second,nanosecond);
+		
+		LocalDateTime lt= LocalDateTime.of(1995,Month.MAY,12,04,20,20,30);
+		System.out.println("particular date and time is: "+lt);
+		
+
+	}
+
+}
