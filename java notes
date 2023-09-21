@@ -1,0 +1,93 @@
+//Package
+-group of class.
+
+//static
+- Static methods/attributes can be accessed without creating an object of a class.
+
+//variable
+-to store value.
+
+//abs in mathematical operator
+-abs() method returns the absolute (positive) value of a number.
+ex:
+sout(Math.abs(-12));
+o/p= 12
+
+//to find random number between two no's
+ex: between 4 and 8
+-sout(4+(8-4)*Math.random());
+
+//OOP's
+-class is not a real world entity.it is blueprint.
+-object is set of code which perform perticular task.it is an instance of class.it is real world entity.it occupies memory.
+
+//what is functional interface
+-interface having only one method.if more than one method is present in interface then that will not be functional interface
+-lamda function follows the functional interface
+
+
+
+//to reverse string of collection
+- StringBuffer b= new StringBuffer(name-of-collecion);
+sout(b.reverse);  ///it will reverse each word or element of collection
+
+____________________________________________________________________________________________________________________________________________________
+
+//Lamda:-
+-It is used with functional interface i.e.only one abstract class should be there.
+-we cant create obj of interface
+-Only abstract methods are present in functional interface. i.e. interface is collection of abstract class.
+-@FunctionalInterface = this annotation shows only one abstract method should be there.
+
+#3 functional interfaces
+1.Runnable has run() abstract method;
+2.Collable has call() abstract method;
+3.Comparable has comapareTo() method.
+4.ActionListener has actionperformed() method.
+
+//Predefined functional interfaces(if we dont have functional interface in our coding bt still want to use lamda then use this).
+
+1.Predicate =>test()
+-When we have to check conditons i.e. if else that time prefer this.
+-predicate has test() method which take one parameter.
+-test() takes one parameter takes.gives boolean answer.
+-to join two or more predicate we use "and","or","negate(same as NOT operator)".
+
+2.Function =>apply()
+-when we want to give some input and want to get output as value not a boolean answer then prefer this.
+-In fuction interface we have apply() method.
+-apply() takes any parameter and returs single value of any type.
+-Syntax:
+Function<type, return_type>
+{
+  return apply(type);
+}
+-to combine function a]andThen() b]compose()...reverse order of andThen() function
+
+3.Consumer =>accept()
+-it has single abstract method i.e. accept().
+-It will take one input as parameter and does not return anything.It just do action.
+
+
+4.Supplier =>get()
+-it has single abstract method i.e. get().
+-It will not take parameter but return some object or value.
+
+**above all predefine functional interface are present in java.util.function package
+Predicate<String> p=e-> e.length();
+p=refernce variable
+e=argument variable
+________________________________________________________________________________
+
+//Exception handling
+- when exception occures methoc creates exception object which contain 1.Exception name 2.Description 3.Stack trace(means in which line exception is occured)
+and passed to JVM.
+
+//e.printStackTrace()
+-It is a method of Java's throwable class which prints the throwable along with other details like the line number and class name where the exception occurred. 
+-throw() keyword 
+  =>throws user define exception object to JVM.
+  =>it is used with user define exception or custome exception(those exception which we create)
+-Checked(Compile time exception).
+-Unchecked(Runtime exception)
+  
