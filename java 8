@@ -1,0 +1,629 @@
+//LISP is the first who used lamda
+
+//Lamda:-
+-It is used with functional interface i.e.only one abstract class should be there.
+-we cant create obj of interface
+-Only abstract methods are present in functional interface. i.e. interface is collection of abstract class.
+-@FunctionalInterface(means single abstract method i.e.(SAM))= this annotation shows only one abstract method should be there.
+-use of funtional interface is to invoke lamda.
+-SAM interface is called as functional interface.
+
+//Type inference
+-On basis of context compiler will guess the type of argument that is called type inference.we dont need to provide datatype of argument.
+____________________________________________________________________________________________________________________________________________________
+
+#3 functional interfaces
+1.Runnable has run() abstract method;
+2.Collable has call() abstract method;
+3.Comparable has comapareTo() method.
+4.ActionListener has actionperformed() method.
+
+//difference between runnable and collable functional interface
+-Runnable does not return a value, while Callable does. The run() method in the Runnable interface has a void return type, meaning it does not produce a result. 
+-On the other hand, the call() method in the Callable interface returns a value of a specified type and can throw checked exceptions.
+-functional interface can have any number of default method and any number of static methods but there should be only one abstract method.
+
+#few cases of functinal interface with inheritance
+
+case1: following is allowed
+@FunctionalInterface
+public interface i1()
+{
+public void m1();
+}
+@FunctionalInterface
+public interface i2 extends i1
+{
+
+}
+
+case2:following is allowed
+@FunctionalInterface
+public interface i1()
+{
+public void m1();
+}
+@FunctionalInterface
+public interface i2 extends i1
+{
+public void m1();
+}
+
+case3:not allowed
+@FunctionalInterface
+public interface i1()
+{
+public void m1()
+}
+@FunctionalInterface
+public interface i2 extends i1
+{
+public void m2()  //as this interface already extends i1 so automatically it has m1() but still it has m2() which is abstract so not allowed
+}
+
+case4:allowed
+@FunctionalInterface
+public interface i1()
+{
+public void m1();
+}
+
+public interface i1 extends i1  //this is allowed because it has not declared with @FunctionalInterface
+public interface i1()
+{
+public void m1();
+}
+@FunctionalInterface
+public interface i1 extends i1
+{
+public void m1();
+}
+{
+public void m1();
+}
+
+____________________________________________________________________________________________________________________________________________________
+//Predefined functional interfaces(if we dont have functional interface in our coding bt still want to use lamda then use this).
+
+1.Predicate =>test()
+-When we have to check conditons i.e. if else that time prefer this.
+-predicate has test() method which take one parameter.
+-test() takes one parameter takes.gives boolean answer.
+-to join two or more predicate we use "and","or","negate(same as NOT operator)".
+
+2.Function =>apply()
+-when we want to give some input and want to get output as value not a boolean answer then prefer this.
+-In fuction interface we have apply() method.
+-apply() takes any parameter and returs single value of any type.
+-Syntax:
+Function<type, return_type>
+{
+  return apply(type);
+}
+-to combine function a]andThen() b]compose()...reverse order of andThen() function
+--when we have used compose f2 will execute first then f1 will execute
+-when we use andThen f1 execute first then f2 executes.
+-identity is a static function which takes input and gives output as it is.
+
+3.Consumer =>accept()
+-it has single abstract method i.e. accept().
+-It will take one input as parameter and does not return anything.It just do action.
+-to join 2 or more consumers
+  1.first way to join
+consumer1.andThen.consumer2.ansThen.accept("xyz");
+  2.2nd way to join
+Consumer<datatype> c4=consumer1_name.andThen.consumer2_name;
+
+##NOTE:
+-we cant join consumers having different datatype
+
+4.Supplier =>get()
+-it has single abstract method i.e. get().
+-It will not take input parameter but return some object or value.
+-supplier not provides any default method for chaining.
+
+**above all predefine functional interface are present in java.util.function package
+Predicate<String> p = e-> e.length();
+p=refernce variable
+e=argument variable
+
+_______________________________________________________________________________________
+-When we want to define own sorting then use "Comparator which has compare() method".
+
+//Anonymous inner class
+Ex:
+ 
+class test
+{
+psvm()
+{
+   Runnanle r=new Runnable() //we have not created obj of runnable we have implements the runnable
+   {
+   public void run()
+   {
+   sout("hello world");
+   }
+   } ;
+//above one thread is created so to start that use start  
+Thread t= new Thread(r);
+t.start();
+   
+}
+}
+
+__________________________________________________________________________________________________
+-Annonymous inner class are more powerfull than lamda because we can use lambda for only funtional interface having one abstract method.
+annonymous inner class can use for any condition.like annonymous innner class can implement interface having one or more abstract method,it can extends concreat class,it can implement functional interface.
+-Anonymous inner classes are useful in situations where you need to create a class that is only used once and does not need to be referenced elsewhere in your code.
+-So annonuymous inner class and lambda are not equal.
+-We can create instance variable inside annonymous class.
+-we cant create instance variable inside lambda.variable created variable inside the lambda considered as local variable.
+-can create obj of annonymous class bt cant create obj of lambda
+-if we have declared local variable inside lambda it considered as final we cant make it change.
+-interface variable is always final
+  public static final int=10;
+
+-we add concreate method in form of default method
+#Concreat method
+-a concrete method refers to a method that has an implementation or body defined within a class. It provides the actual code that is executed when the method is called. 
+Concrete methods are contrasted with abstract methods, which do not have an implementation and are meant to be overridden by subclasses.
+______________________________________________________________________________________________________________________________________________________________________
+
+//Ponints to remember
+1.if we override static method then child method also should be static.if parent method is static and child method is non static it is not allowed.
+2.Overriding is not allowed in interface static method
+3.if we want to override interface static method create same method in main class also.
+4.if static method declared in interface is public and when we are overriding it we have delclared it as private it is allowed because it is not overriding.
+5.in java 1.8 verison we can declare main method inside interface.
+_______________________________________________________________________________________________________________________________________________________________________
+
+//l.add(new User(username, password)); is adding a new instance of the User class to a list l.
+
+//to overridr tostring method()
+ public String toString()
+{
+String s= String format("%s,%f,name,salory")
+    // %s= for string
+    // %f = for double
+
+} 
+
+-String s= String format("%s,%0.2f,name,salory")
+0.2f means it will take upto two digit after point(i.e. 30000.00)
+
+____________________________________________________________________________________________________________________________________________________
+//Two argument functional interface
+
+1]BiPredicate
+-if we want to provide two input for conditional checks we use bipredicate.
+-Syntax:
+interface BiPredicate<arg1,arg2>
+{
+  public boolean(arg1 t,arg2 u);
+
+}
+-one abstract method is "test".
+-to join two or more Bipredicate we use "and","or","negate(same as NOT operator)".
+
+2]BiFunction
+-if we want to provide two input in function use bifunction.
+-BiFunction chaining is not possible.BiFunction and Function chaining is possible.
+
+3]BiConsumer
+-if we want to provide 2 inputs in consumer use biconsumer.
+-BiConsumer chaining is possible using andThen
+
+**note:there is no bisupplier becoz supplier not takes any input it just returns value.
+
+-to write and read binary data we use IO Stream.
+____________________________________________________________________________________________________________________________________________________//Primitive type predefined functional interfaces.
+
+ 1.predicate 2.function 3.consumer 4.accept
+ this are object type predefined functional interfaces.
+
+lets see primitive type functional interfaces.
+
+#what is wrapper class
+-wrapper class is used to convert primitive type into object.
+
+1.Autoboxing:converting primitive type value into object of wrapper class.
+ex:
+
+class myclass
+{
+psvm()
+ {
+   int a=10;  //primitive type
+   Integer b= new Intege(a);  //converting primitive to wrapper
+   Sysout(a);   //o/p=10
+   Sysout(b);    //o/p=10;
+ }
+}
+
+2.Unboxing:converting object of wrapper class into primitive type.
+
+ex:
+
+class unbox
+{
+ psvm()
+ {
+   Integer a= new Integer(12);  //wrapper class
+   int b= a;    //wrappper class to primitive type
+   Sysout(a);  //12
+   sysout(b);  //12;
+ }
+}
+
+
+A]Primitive type predefined functional interfaces for predicate.
+
+1.IntPredicate
+
+ex:
+
+int[] i={1,2,3,4,5,6};
+
+IntPredicate p= i->i%2==0;  //no need to specify input type as it is IntPredicate
+
+for(int j:i)
+{
+Sysout(p.test(j);
+}
+
+2.LongPredicate
+=same as above example
+
+3.DoublePredicate
+=same as above example
+
+//note:there are only 3 primitive functional interfaces related to predicate are there
+1.IntPredicate
+2.LongPredicate
+3.DoublePredicate
+
+
+B]Primitive type predefined functional interfaces for function.
+
+1.IntFunction
+int[] a={1,2,3,4,5,6};
+
+       IntFunction  <Integer>  p=i->i*i;
+  ->inputtype<-   ->returnType<-
+
+for(int j:a)
+{
+Sysout(p.apply(j));
+}
+
+
+2.LongFunction<return_type>
+public return_type apply(long l);
+
+
+3.DoubleFunction<return_type>
+public return_type apply(double d);
+
+//above 1,2,3 are for input type
+________________________________________________________________________________________________________________________________________________________________-
+
+4.ToIntFunction = it will take any input type bt output will be in integer
+String[] arr= {"cat","dog","rabbit","rat"};
+		
+ToIntFunction<String> str = i -> i.length();
+		
+for(String s:arr)
+ {
+    System.out.println(str.applyAsInt(s));
+ }
+
+
+5.ToLongFunction<input_type>
+=applyAsLong
+
+6.ToDoubleFunction<input_type>
+=applyAsDouble
+
+//above 4,5,6 for return type
+_______________________________________________________________________________________________________________________________________________________________________
+
+7.IntToLongFunction
+-applyAsLong(int i)
+-no need to provide input type and return type
+
+8.IntToDoubleFunction - no need to provide input type and return type.here input type is int and return type is double
+ex:
+IntToDoubleFunction i=j->Math.sqrt(j);
+System.out.println(i.applyAsDouble(12));  //apply as double not int because we want ans in double type
+
+9.LongToIntFunction
+-applyAsInt(long l)
+
+10.LongToDoubleFunction
+-applyAsDouble(long l)
+
+11.DoubleToIntFunction
+-applyAsInt(double d)
+
+12.DoubleToLongFunction
+-applyAsLong(double d)
+
+13.ToIntBiFunction<T,U>
+-applyAsInt<T t,U u>
+
+14.ToLongBiFunction<T,U>
+-applyAsLong(T t,U u)
+
+15.ToDoubleBiFunction<T,U>
+-applyAsDouble<T t,U u)
+
+
+C]Primitive type predefined functional interfaces for consumer.
+
+1.IntConsumer
+IntConsumer i= j->System.out.println(j*j);
+i.accept(4);
+
+2.LongConsumer
+
+3.DoubleConsumer
+
+4.ObjIntConsumer
+ex:
+ObjIntConsumer <emp>  o=(e,i)->e.salory=e.salory+i;
+          ->input type<-
+5.ObjLongConsumer
+
+6.ObjDoubleConsumer
+
+D]Primitive type predefined functional interfaces for supplier.
+
+1.IntSupplier
+-getAsInt();
+
+2.LongSupplier
+-getAsLong();
+
+3.DoubleSupplier
+-getAsDouble();
+
+4.BooleanSupplier
+-getAsBoolean();
+_______________________________________________________________________________________________________________________
+1.Unary operator
+-when input and output type is same we use unary operator.
+-unary operator is child interface of unary operator only.
+-unary operator take one paramter only as input and output type is same.
+
+inteface UnaryOperator<T>
+{
+ public T apply(T t);  //1st T is returntype,2nd T is argument type i.e.input type
+
+}
+ 
+
+-unary operator also has autoboxing and autounboxing problem.so we can use primitive unary operator
+
+ 1.IntUnaryOperator
+ -applyAsInt();
+
+ 2.LongUnaryOperator
+ -applyAsLong();
+
+ 3.DoubleUnaryOperator
+ -applyAsDouble();
+
+
+2.Binary Operator
+-It is child interface of BiFunction.
+-In BiFunction if input type of both input in bifunction and return type in bifunction is same we can use this.
+
+ex: two strings are given output should be concatination of both string
+
+BinaryOperator<String> b= (i,j)->i.concat(j);   //here <String> is datatype of two input and it is also return type
+b.apply("hello","world");  //o/p=helloworld
+
+______________________________________________________________________________________________________________________________________________________________
+
+#Primitive type of BinaryOperator
+
+1.IntBinaryOperator
+-both input type is int and output is int.there is no autoboxing and autounboxing.
+-applyAsInt(input1,input2);
+
+2.LongBinaryOperator
+-applyAsLong(input1,input2);
+
+3.DoubleBinaryOperator
+-applyAsDouble(input1,input2);
+
+_____________________________________________________________________________________________________________________________________________________________
+#Method reference by double colon(::)
+-In java "::" this operator is used for method refernce and constructor reference.
+-Instead of lamda we can use method reference.
+
+
+ex:
+
+Interface myinterface
+{
+ public void m1();
+}
+
+class test
+{
+  public static void m2()
+  {
+     Sysout("hello");
+     Sysout("world");
+     Sysout("welcome");
+  }
+
+public static void main(String[] args)
+{
+    myinterface m= test::m2;   //as m2 is static method we can call it using class name.here m1 refers m2
+    m.m1();  //here we have called m1 but internally m2 will execute as m1 refers m2
+
+}
+
+}
+
+-condition to use method refernce:number of arguments of both method shoudl be same.doesn't matter what is return type,what is access modifier.
+-In above example m1 amd m2 has same argument number i.e.0
+-In lambda we were giving seperate implementation for method,but in method reference if we have one method and dont want to write seperate implementation
+again and again we can use method reference.
+-advanatge of method reference is:code reusability. 
+_______________________________________________________________________________________________________________________________________________________________________
+
+#Date and time API(Joda time API)
+-To handle date values and time values effectively this feature is introduced in java 1.8
+-This API is developed by joda.org people hence it is also called as Joda time API.
+-Till 1.7 version whatever class and interface we had to represent data and time that is not so convenient,not so good according to function so joda.ord people invented this.
+-Two imp classes to get current system data and time
+  1.LocalTime
+  2.LocalDate
+-above both classes present in java.time package.
+
+***LocalDate.EPOCH represents the date of January 1, 1970, in the ISO calendar system. It is a predefined constant in the LocalDate class of the Java 8 Date-Time API.
+In the ISO calendar system, dates are represented using the year-month-day format. January 1, 1970, is considered the epoch or the starting point for many timekeeping systems,The result is then printed, showing the date in the format "yyyy-MM-dd".
+
+***LocalTime.MAX constant represents the maximum valid time value, which is 23:59:59.999999999.
+
+***LocalTime.MIDNIGHT represents the time of midnight, which is the start of a new day
+
+***LocalTime.of(0, 0) represents a specific time of day in the ISO-8601 calendar system, with an hour value of 0 (midnight) and a minute value of 0. 
+
+***LocalTime.ofNanoOfDay(1) is used to create a LocalTime object representing a time with a nanosecond value of 1.
+
+-To get date and time simultaneously  use "LocalDateTime" class.
+-To represent quantity of time(i.e. how many days,how many months,how many years) use "Period".it is used to find duration between two things.
+
+#year class
+-ex : to check given year is leap or not
+int n=1990;
+Year y= Year.of(n);
+if(y.isLeap)
+{
+sout("%d is leap year",n);
+}
+else
+{
+sout("%d is not leap year",n);
+}
+
+#ZoneId
+-To represent zone use this class.
+
+#ZonedDateTime
+-To find date and time of particular zone use ZonedDateTime.
+
+***Date and time API i short***
+-Joda time contains following classes
+ 1.LocalDate
+ 2.LocalTime
+ 3.LocalDateTime
+ 4.Period
+ 5.Year
+ 6.ZoneId
+ 7.ZonedDateTime
+__________________________________________________________________________________________________________________________________________
+-to provide dummy implementation default method is used.
+-If i have created interface with multiple implementation classes are there
+if i want to add new methods to interface then all implementation classes will be affected.without effectiong implementation classes to extend interface functionality then we should go for default methods.
+-:: this operator is used to implement method reference and constructor reference.
+
+_________________________________________________________________________________________________________________________________________________________________
+
+##Questions
+1.Find average of even numbers from given list.
+2.Given a list of persons, find the person with the highest age.
+3.Write a predicate to check if a string is a valid IP address.
+
+_______________________________________________________________________________________________________________________________________________________
+
+#Anonymous inner class
+-it it a class without name.
+OR
+-A nested class with don't have name is called anonymous inner class.
+
+ex;
+
+//lets consider we have one anonymous class
+ public interface anonymousCls()
+{
+      public void show();
+}
+
+
+
+
+public class myCls
+{
+psvm(String[] args)
+{
+ //to call anonymousCls() this we have to create object of anonymousCls
+    anonymousCls obj= new anonymousCls()
+   {
+      public vois show()
+      {
+          Sysout("hello");
+      }
+   }
+
+//let call anonymousCls's method
+obj.show();
+}
+}
+
+=>o/p: hello
+
+____________________________________________________________________________________________________________________________________________
+-To combine two or more list or collection we can use flatMap.
+
+-StringJoiner => To join two or more strings
+Ex:
+
+class xyz
+{
+psvm(String[] args)
+ {
+   StringJoiner sj= new StringJoiner("&");
+   sj.add("hello");
+   sj.add("world");
+
+  Sysout(sj);  //o/p => hello&world
+ }
+}
+
+____________________________________________________________________________________________________________________________________________________
+
+#Design patterns
+Q. What is Design patterns?
+Ans=>A design patterns are well-proved solution for solving the specific problem/task.
+
+Ex:
+Problem Given:-
+Suppose you want to create a class for which only a single instance (or object) should be created and that single object can be used by all other classes.
+
+Solution:-
+Singleton design pattern is the best solution of above specific problem. So, every design pattern has some specification or set of rules for solving the problems. What are those specifications, you will see later in the types of design patterns.
+
+- 3 types of design patterns
+1.Creational
+2.Structural
+3.Behavioural
+____________________________________________________________________________________________________________________________________________________________________
+Q. What is Saga pattern in Microservice?
+Saga pattern - 
+The Saga design pattern is a way to manage data consistency across microservices in distributed transaction scenarios. A saga is a sequence of transactions that updates each service and publishes a message or event to trigger the next transaction step.
+
+**Types of SAGA implementation
+ 1.Choreography - event based
+ 2.Orchestration - command based
+
+
+
+
+
+
+
