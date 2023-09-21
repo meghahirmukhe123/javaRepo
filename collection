@@ -1,0 +1,51 @@
+//iterator (this is for forward transversing)
+syntax:
+Iterator<datatype> itr = collectionName.iterator();
+while(itr.hasNext())
+{
+String s= itr.next();
+sout(s);
+}
+
+//listIterator (this is use for backward transverse)
+ListIterator<datatype> itr = collectionName.iterator();
+
+//In set values are added according to hashcode(unique integer value of that object) value.
+-To get elements from set we can use iterator.
+-To get elements from list we can use get,iterator(to get elements in forward direction only) or List iterator(to get element in forward as well as backward direction).
+-We can't create object of interface. (we cant creata object of list,map... so will use classes i.e. arraylist,TreeSet etc and we can create obj of that)
+
+//untyped safe list
+syntax:
+LinkedList l=new LinkedList<>();
+
+//create vector
+Vector<datatype> v= new Vector<>();
+
+________________________________________________________________________________________________________________________
+//there are 3 types of cursrs
+1.Iterator
+-with the help of this we can only read and remove the elements.
+-applicable for any collection.
+
+2.ListIterator
+-with the help of this we can add,remove,read,replace the elements.
+-only applicable for listInterface related class.
+
+3.Enumeration
+-to retrive data one by one.
+-only used for legecy class i.e.only applicable for vector and stack.
+-Syntax: Enumeration e= collectionName.elements();
+-Two methods:-hasMoreElements(),nextElement().
+-only use for forward getting.
+
+_____________________________________________________________________________________________________________________________
+
+-In hashset we can store hetrogeneous(multiple data type values) values.
+-Non-synchronized means multiple thread are working parallely.
+-In LinkedList we can insert and delete element in middle. 
+  -no random access is allowed in linkedlist
+
+//map
+-Hashamp not follow insertion order
+-Linkedhash map followes insertion order and gives output as per insertion order.
