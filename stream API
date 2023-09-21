@@ -1,0 +1,62 @@
+//what is stream
+-to process the object or data store in collection is called stream.
+-present in java.util package.
+-Stream is just an interface
+-it is not compulsory that stream is only used for collection.stream can be use for any group of element,array.
+
+//stream provides following mechanisms.
+1.filter()     (to filter data acc to condition)
+2.map()        (to add something in collection data or do additional process on collection data and do mapping of that data)
+3.sorted()     (to sort data which is stored in stream)
+4.count()      (to count how many data present in stream)
+5.collect()    (after filter whatever data we will get to collect that and store in another collection we use collect())
+6.distinct()   (to get unique data)
+7.foreach()    (to read each and every value from collection)
+8.min()        (to find minimum value)
+9.max()        (to find maximum value)
+10.limit()     (to get top elements as per user)
+11.flatmap()   (to work with complex collection.map will return single value bt flatmap will return multiple values.it wil return stream of object)
+12.reduce()    (to combine all object into one single object.EX: A,B,C . o/p: ABC)
+13.toArray()   (to convert stream object to array)
+14.anyMatch()  (it will return true of any of user input is matches with given any collection object)
+15.allMatch()  (it will give boolean value true or false)
+16.noneMatch() (if user input is not match with given list it will print true else print false)
+17.findAny()   (it will give any random element from given stream)
+18.findFirst() (to return first element from stream)
+19.Comparator.reverseOrder() (to reverse the list)
+20.Stream.concat(stream1,stream2) (to merge two streams)
+21.Stream.of() (to create stream)
+
+//2nd way of creating stream
+Stream<String> newStr= Stream.of(str);
+    ->dataType<-           ->collection name<-
+
+
+with the help of this we can process data from collection.
+-while proceesing in collection first we store collection data in stream then we apply stream methods
+and then we store that desire output in some another collection.
+
+-we pass the predicates in stream method
+ex:l.stream().filter(x->x*2).collect.......
+here, x->x*2 is the predicate.
+-predicate means boolean valued function
+
+//another way to add elements in list:-
+-1st way:- List<Integer> numbers= Arrays.asList(10,15,20,25,30);
+-2nd way:- List<Integer> l1= List.of(2,5,9,10,12);   //this way is immutable i.e. once we create a list with this method we cant make any chaanges.
+
+//Parellel stream
+-to improve performance 
+-excecution will be faster
+-stream will divide into multiple sub stream
+
+//stream API and IO stream are different.
+-IO stream are sequence of data.
+-with the help of IO stream we read and write data from source to destiny.
+
+//Optional
+-Optional is used to represent a value that may or may not be present. 
+
+
+
+
